@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   build-source-release-draft:
-    if: ${{ github.repository == 'apache/casbin-jcasbin' && github.repository == 'cooronx/casbin-jcasbin' && !contains(github.ref_name, '-') }}
+    if: ${{ (github.repository == 'apache/casbin-jcasbin' || github.repository == 'cooronx/casbin-jcasbin') && !contains(github.ref_name, '-') }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
